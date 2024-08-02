@@ -140,6 +140,7 @@
   justify-content: start;
   gap: 5px;
   grid-template-columns: auto auto;
+  max-width: 270px;
 }
 .cvexperience-block-marker {
   grid-row: 1/5;
@@ -167,17 +168,25 @@
   color: rgb(54, 53, 53);
   font-weight: 600;
   font-size: 0.75rem;
+  word-wrap: break-word;
+  max-width: 240px;
 }
 
 .cvexperience-company {
   color: rgb(78, 77, 77);
+  word-wrap: break-word;
+  max-width: 240px;
 }
 
 .cvexperience-position {
   color: rgb(54, 53, 53);
   font-weight: 600;
+  word-wrap: break-word;
+  max-width: 240px;
 }
 
 .cvexperience-details {
   margin-bottom: 20px;
+  word-wrap: break-word;
+  max-width: 240px;
 }
