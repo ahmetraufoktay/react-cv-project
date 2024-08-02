@@ -1,9 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 :root {
   font-size: 16px;
-  --input-width: 300px;
+  --input-width: 10rem;
   --input-height: 40px;
-  --block-width: auto;
+  --block-width: 40rem;
+  --cv-color: rgb(43, 51, 63);
   --block-color: rgb(251, 246, 246);
 }
 * {
@@ -12,35 +13,38 @@
   padding: 0;
 }
 
-#root {
+article {
   display: grid;
-  grid-template-columns: auto auto;
-  grid-template-rows: auto auto;
-  justify-content: center;
-  background-color: rgb(239, 235, 235);
+  justify-content: end;
 }
 
 nav {
   height: 100px;
+  max-width: var(--block-width);
   display: grid;
   place-items: center;
   font-size: 2rem;
-  background-color: cadetblue;
+  background-color: #0a75bc;
   color: white;
+  box-shadow: -10px 0px #0a75bc;
 }
 
 input {
   height: var(--input-height);
 }
 
+.content label h3 {
+  color: rgb(130, 140, 162);
+}
+
 input,
 textarea {
   font-size: 1rem;
   border-radius: 5px;
-  border-style: groove;
-}
-textarea {
-  border: 2px solid black;
+  border-style: none;
+  background-color: rgb(216, 221, 232);
+  box-sizing: border-box;
+  padding: 10px;
 }
 
 .blockTitle {
@@ -48,6 +52,30 @@ textarea {
   place-items: center;
   font-size: 2rem;
   height: 75px;
-  background-color: #f6e8e87a;
+  background-color: rgb(251, 246, 246);
   width: 100%;
+}
+
+@media only screen and (min-width: 0px) and (max-width: 1200px) {
+  #root {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    justify-items: center;
+
+    .page {
+      box-shadow: -8px 0px rgb(101, 110, 131);
+    }
+    .page {
+      height: 800px;
+    }
+  }
+}
+@media only screen and (min-width: 1201px) {
+  #root {
+    display: grid;
+    background: linear-gradient(rgb(239, 235, 235), rgb(105, 111, 130));
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
 }
