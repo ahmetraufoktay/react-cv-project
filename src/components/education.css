@@ -3,11 +3,13 @@
   flex-direction: column;
   align-items: center;
   box-sizing: border-box;
-  width: var(--block-width);
-
+  box-shadow: -10px 0px blueviolet;
+  border-top: 2px solid rgb(177, 189, 211);
+  border-bottom: 2px solid rgb(177, 189, 211);
+  background-color: var(--block-color);
+  max-width: var(--block-width);
   h3 {
     margin: 0;
-    margin-top: 10px;
   }
 }
 
@@ -17,26 +19,58 @@
   grid-template-rows: auto auto;
   gap: 50px;
   text-align: center;
-  width: var(--block-width);
-  background-color: var(--block-color);
   padding: 20px;
 }
 
+.educationTitle {
+  grid-column: 1/3;
+  height: 40px;
+  display: grid;
+  border-bottom: 2px solid black;
+
+  h3 {
+    justify-self: center;
+  }
+
+  button {
+    justify-self: end;
+    transform: translate(-20px, -40px);
+    background-color: transparent;
+    box-sizing: border-box;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 2rem;
+  }
+}
+
 .education input {
-  width: var(--input-width);
-  margin-bottom: 20px;
+  width: 90%;
 }
 
 .degreeDuration {
   display: grid;
   grid-template-columns: auto auto;
-  grid-template-rows: auto auto;
+  grid-template-rows: auto;
+
+  label > h3 {
+    word-wrap: break-word;
+  }
 }
 
-#degreeStart {
-  grid-area: 2/1/3/2;
+.add-education {
+  height: 48px;
+  font-size: 2rem;
+  display: grid;
+  place-content: center;
+  border: 2px solid black;
+  color: white;
+  border-radius: 10px;
+  background-color: rgb(5, 22, 34);
+  cursor: pointer;
+  margin-bottom: 50px;
+  transition: transform 0.3s ease;
 }
-
-.degreeDuration input {
-  width: calc(var(--input-width) / 2 - 10px);
+.add-education:active {
+  transform: scale(90%);
 }
